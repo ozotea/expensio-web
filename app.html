@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Expensio — Dashboard</title>
+<meta name="description" content="Your private Expensio dashboard, synced from Google Drive." />
+<link rel="icon" type="image/png" href="assets/mark.png?v=20260828" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="app.css?v=20260828" />
+<!-- Google Identity Services + Picker (gapi) -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/api.js" async defer></script>
+</head>
+<body>
+
+<!-- ░░░ LOGIN VIEW ░░░ -->
+<section class="login" id="loginView">
+  <a class="login__back" href="index.html">&larr; Back to website</a>
+
+  <div class="login__inner">
+    <h1 class="login__brand">Welcome to</h1>
+    <picture>
+      <source srcset="assets/brand-anim.webp?v=20260828" type="image/webp" />
+      <img src="assets/brand-anim.gif?v=20260828" alt="Expensio" class="login__wordmark" width="286" height="72" />
+    </picture>
+    <p class="login__tag">The smartest way to track your expenses and master your finances.</p>
+
+    <button class="gbtn" id="googleSignIn">
+      <svg viewBox="0 0 18 18" width="24" height="24" aria-hidden="true"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.81.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.97 10.72a5.4 5.4 0 0 1 0-3.44V4.95H.96a9 9 0 0 0 0 8.1l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg>
+      Continue with Google
+    </button>
+
+    <button class="login__guest" id="guestBtn" type="button">Continue as Guest</button>
+    <p class="login__note" id="loginNote"></p>
+  </div>
+
+  <footer class="login__foot">
+    <p>By continuing, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+    <p class="login__copy">&copy; 2026 Expensio. All rights reserved.</p>
+  </footer>
+</section>
+
+<!-- ░░░ APP SHELL (hidden until signed in) ░░░ -->
+<div class="app" id="appView" hidden>
+  <!-- Sidebar -->
+  <aside class="side">
+    <a class="side__brand" href="index.html">
+      <img src="assets/mark.png?v=20260828" alt="" />
+      <span><b>Expensio</b><small>EXPENSE TRACKER</small></span>
+    </a>
+    <nav class="side__nav">
+      <a class="side__link is-active" data-tab="dashboard"><span class="ico">🏠</span> Dashboard</a>
+      <a class="side__link" data-tab="transactions"><span class="ico">📋</span> Transactions</a>
+      <a class="side__link" data-tab="accounts"><span class="ico">🏦</span> Accounts</a>
+      <a class="side__link" data-tab="cards"><span class="ico">💳</span> Cards &amp; EMI</a>
+      <a class="side__link" data-tab="analytics"><span class="ico">📊</span> Analytics</a>
+      <a class="side__link" data-tab="budgets"><span class="ico">🎯</span> Budgets</a>
+      <a class="side__link" data-tab="profile"><span class="ico">👤</span> Profile</a>
+    </nav>
+    <div class="side__privacy">
+      <b>🛡️ Your data is private</b>
+      <p>All data stays in your Google Drive. We never see it.</p>
+    </div>
+    <div class="side__sync" id="syncStatus">
+      <span class="dot"></span><span><b>Last synced</b><small id="syncTime">just now</small></span>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <header class="top">
+      <div class="top__greet">
+        <h1 id="pageTitle">Welcome 👋</h1>
+        <p id="pageSub"></p>
+      </div>
+      <div class="top__right">
+        <button class="top__resync" id="resyncBtn" title="Re-sync from Drive">⟳ Sync</button>
+        <div class="top__user" id="topUser">
+          <img id="userAvatar" alt="" title="Open profile" />
+          <button class="top__logout" id="logoutBtn">Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="view"></div>
+  </main>
+</div>
+
+<!-- ░░░ SYNC PROMPT MODAL ░░░ -->
+<div class="modal" id="syncModal" hidden>
+  <div class="modal__card">
+    <div class="modal__drive">▲</div>
+    <h2>Sync your backup from Google Drive</h2>
+    <p>Choose your latest <b>Expensio</b> backup (<code>expensio-*.json</code>) from Drive so your dashboard reflects your real data. Nothing is uploaded — we only read the file you pick.</p>
+    <div class="modal__actions">
+      <button class="btn-ghost" id="syncLater">Maybe later</button>
+      <button class="btn-primary" id="syncNow">Sync now</button>
+    </div>
+    <p class="modal__status" id="syncModalStatus"></p>
+  </div>
+</div>
+
+<script src="app.js?v=20260828"></script>
+</body>
+</html>

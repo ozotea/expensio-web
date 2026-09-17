@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Expensio</title>
+<meta name="description" content="Expensio is built privacy-first. Read exactly what the app does and does not collect — your financial data stays on your device." />
+<link rel="icon" type="image/png" href="assets/mark.png?v=20260828" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=20260828" />
+</head>
+<body>
+
+<div class="mesh" aria-hidden="true">
+  <span class="blob blob--mint"></span>
+  <span class="blob blob--blue"></span>
+  <div class="grain"></div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="brand"><img src="assets/mark.png?v=20260828" alt="" class="brand__mark" width="120" height="120" /><span class="brand__name">Expensio</span></a>
+    <a href="index.html" class="btn btn--ghost btn--sm" style="margin-left:auto">← Back to home</a>
+  </div>
+</header>
+
+<main class="legal">
+  <span class="legal__eyebrow">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="legal__updated">Last updated: 2 September 2026</p>
+  <p class="legal__intro">Expensio ("we", "our", "the app") is built privacy-first. This policy explains exactly what the app does and does not collect. In short: your financial data stays on your device, and we run no ads, no trackers and no analytics SDKs. The one thing we do store on our side is a small account record — described in section 1 — which contains none of your finances. Some features differ by platform, and those differences are marked below.</p>
+
+  <div class="legal__doc">
+    <section>
+      <h2>1. Information We Collect</h2>
+      <p>Everything you enter stays in a local database on your device:</p>
+      <ul>
+        <li><strong>What you enter</strong> — your name, transactions (amount, category, notes, brand), account &amp; card metadata (name, type, last 4 digits, limit, bill date), budgets and preferences.</li>
+        <li><strong>Google account</strong> (only if you sign in) — your email, name and profile photo, plus access to an app-specific Expensio folder on your own Google Drive (<code>drive.file</code> scope) for optional backups.</li>
+        <li><strong>Bank notifications</strong> <em>(Android only, and only if you enable Auto-Capture)</em> — read on-device to detect transactions; they are parsed locally and never uploaded. iOS and iPadOS have no equivalent: Apple provides no way for an app to read another app's notifications or your SMS, so Expensio on iPhone, iPad and Mac never does.</li>
+        <li><strong>An account record</strong> <em>(only if you sign in)</em> — when you sign in with Google or with Apple we store a small record in our Firebase project so we know how many people use Expensio and on which platforms. It holds an account identifier, whether the account is Google or Apple, the app version, the platforms you have used, when you were last active, and your email and name where the sign-in method provides them. It contains no transactions, amounts, balances, accounts, cards or budgets. <strong>If you continue as a Guest, none of this happens</strong> — no account is created and nothing about you reaches our Firebase project.</li>
+        <li><strong>What we never collect</strong> — full card numbers, CVV, bank login credentials, Aadhaar, PAN, your location, or your contacts.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>To show your spending analytics, budgets and insights.</li>
+        <li>To create optional backups to your own Google Drive.</li>
+        <li>To power home-screen widgets and app-icon shortcuts <em>(Android)</em>, and Siri quick add <em>(iPhone)</em>.</li>
+        <li>We never use your data for advertising, profiling or resale.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>3. Data Storage &amp; Security</h2>
+      <ul>
+        <li>All financial data is stored in a local SQLite database on your device.</li>
+        <li>Optional backups are stored as a single file in your own Google Drive.</li>
+        <li><strong>Backups are encrypted.</strong> The file is encrypted with AES-256-GCM before it leaves your device, so it is not readable or editable as plain text in Drive, and a file that has been edited is rejected when you restore it. Because the app has to restore your data on any of your devices without a password, the key is built into the app — this protects the file from being read or altered casually, but it is not end-to-end encryption with a key that only you hold.</li>
+        <li>You can protect the app with biometric App Lock, handled entirely by your device's own secure APIs (Android biometrics, or Face ID / Touch ID on Apple devices). We never see your biometric data.</li>
+        <li>We recommend securing your device with a screen lock.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>4. Permissions (all optional)</h2>
+      <ul>
+        <li><strong>Notification access</strong> <em>(Android only)</em> — for Auto-Capture.</li>
+        <li><strong>Camera</strong> — to scan a credit card. The image is read on your device and discarded.</li>
+        <li><strong>Microphone &amp; speech recognition</strong> — for Voice Quick Add, so you can say a transaction instead of typing it.</li>
+        <li><strong>Storage</strong> <em>(Android only)</em> — to save an exported file. On Apple devices you choose where an export goes through the system Files sheet, so no storage permission is needed.</li>
+        <li><strong>Siri &amp; Shortcuts</strong> <em>(iPhone)</em> — if you ask Siri to log an expense, Apple processes the phrase on its side and hands Expensio only the finished result, which is written to your local database like any other entry. We never receive the audio, and Apple's handling of the request is governed by Apple's own privacy policy.</li>
+        <li><strong>Biometrics</strong> — for App Lock.</li>
+        <li><strong>Google Sign-In</strong> — for Drive backup.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>5. Platform Differences</h2>
+      <p>Expensio is on Android today; the iPhone app arrives in September 2026. Everything that touches your data behaves identically on both — local storage, encryption, Drive backup, App Lock and the "we never collect" list above all apply everywhere. Only these differ:</p>
+      <ul>
+        <li><strong>Auto-Capture from bank notifications</strong> — Android only, and permanently so. Apple provides no way for an app to read another app's notifications or your SMS.</li>
+        <li><strong>Home-screen widgets and app-icon shortcuts</strong> — Android only for now; planned for a later iPhone release.</li>
+        <li><strong>Siri quick add</strong> — iPhone only, since Siri is an Apple service.</li>
+        <li><strong>Voice Quick Add, camera card scan and everything else</strong> — both platforms.</li>
+      </ul>
+      <p>Where a permission or data flow exists on only one platform, it simply never runs on the other. Nothing in this policy grants us access on a platform where the feature is unavailable.</p>
+    </section>
+    <section>
+      <h2>6. Data Sharing</h2>
+      <p>We do not sell or share your financial data with anyone, and there are no ad networks or tracking SDKs. Your financial data goes only where <strong>you</strong> send it — an exported file, or your own Google Drive backup. Separately, the account record described in section 1 is stored in our Firebase project. Firebase is operated by Google as our processor; it is never used for advertising and is never sold or passed on.</p>
+    </section>
+    <section>
+      <h2>7. Data Retention &amp; Deletion</h2>
+      <ul>
+        <li>You control all data — clear or reset it any time from Profile → Clear Data.</li>
+        <li>Uninstalling the app removes all local data.</li>
+        <li>You can delete your Drive backup from Google Drive at any time.</li>
+        <li>To have the account record described in section 1 deleted, email us and we will remove it.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>8. Children's Privacy</h2>
+      <p>Expensio is not intended for children under 13, and we do not knowingly collect data from them.</p>
+    </section>
+    <section>
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this policy from time to time. Material changes will be reflected here with a new "last updated" date.</p>
+    </section>
+    <section>
+      <h2>10. Contact</h2>
+      <p>Questions about your privacy? Email us at <a href="mailto:support.expensio@gmail.com">support.expensio@gmail.com</a>.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="legal__footer">
+  <a href="index.html" class="brand"><img src="assets/mark.png?v=20260828" alt="" class="brand__mark" width="120" height="120" /><span class="brand__name">Expensio</span></a>
+  <div class="legal__footlinks"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:support.expensio@gmail.com">Contact</a></div>
+  <span>© 2026 Expensio. All rights reserved.</span>
+</footer>
+
+<script src="script.js?v=20260828"></script>
+</body>
+</html>

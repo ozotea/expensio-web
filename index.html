@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Expensio — Take Control of Every Rupee</title>
+<meta name="description" content="Expensio automatically detects transactions from your bank messages and tracks expenses, budgets, cards, EMIs and insights — beautifully, privately, offline-first." />
+
+<link rel="icon" type="image/png" href="assets/mark.png?v=20260828" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=20260828" />
+</head>
+<body>
+
+<!-- ░░░ animated gradient mesh background ░░░ -->
+<div class="mesh" aria-hidden="true">
+  <span class="blob blob--mint"></span>
+  <span class="blob blob--blue"></span>
+  <span class="blob blob--teal"></span>
+  <span class="blob blob--sky"></span>
+  <div class="grain"></div>
+</div>
+
+<!-- ░░░ NAV ░░░ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="brand brand--anim" aria-label="Expensio — home">
+      <picture>
+        <source srcset="assets/brand-anim.webp?v=20260828" type="image/webp" />
+        <img src="assets/brand-anim.gif?v=20260828" alt="Expensio" class="brand__anim" width="286" height="72" />
+      </picture>
+    </a>
+    <nav class="nav__links">
+      <a href="#features">Features</a>
+      <a href="#showcase">Screens</a>
+      <a href="#why">Why Expensio</a>
+      <a href="#updates">Updates</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="app.html" class="btn btn--play btn--sm nav__cta nav__login">
+      <svg viewBox="0 0 18 18" width="15" height="15" aria-hidden="true" style="margin-right:7px"><path fill="#fff" d="M9 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 1.5c-3.3 0-6 1.8-6 4V16h12v-1.5c0-2.2-2.7-4-6-4Z"/></svg>
+      Sign in
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ░░░ HERO ░░░ -->
+<section class="hero">
+  <div class="hero__copy reveal">
+    <div class="pill">
+      <span class="pill__dot"></span> Auto-detects spends from your bank messages <span class="pill__note">(Android)</span>
+    </div>
+    <h1 class="hero__title">
+      Track every expense.<br/><span class="grad-text">Understand every&nbsp;rupee.</span>
+    </h1>
+    <p class="hero__sub">
+      Track expenses, manage budgets, and gain insights with Expensio —
+      the private, offline-first money tracker that logs your spending
+      <em>before</em> you even open the app.
+    </p>
+    <div class="hero__cta">
+      <a href="https://play.google.com/store/apps/details?id=com.ozoteaapps.expensio" target="_blank" rel="noopener" class="btn btn--play">
+        <span class="btn__pg-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="#34D399" d="M3.6 2.3 13 12 3.6 21.7a1 1 0 0 1-.6-.9V3.2a1 1 0 0 1 .6-.9Z"/><path fill="#60A5FA" d="m13 12 3.1-3.1 4.4 2.5a1 1 0 0 1 0 1.7l-4.4 2.5L13 12Z"/><path fill="#2563EB" d="M3.6 2.3 16.1 8.9 13 12 3.6 2.3Z"/><path fill="#16A34A" d="M3.6 21.7 13 12l3.1 3.1L3.6 21.7Z"/></svg>
+        </span>
+        <span class="btn__pg-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
+      </a>
+      <button type="button" class="btn btn--appstore" data-coming-soon>
+        <span class="btn__pg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.05 12.53c-.02-2.4 1.96-3.55 2.05-3.61-1.12-1.63-2.86-1.86-3.48-1.88-1.48-.15-2.89.87-3.64.87-.75 0-1.91-.85-3.14-.83-1.61.02-3.1.94-3.93 2.38-1.68 2.91-.43 7.22 1.2 9.58.8 1.16 1.75 2.46 3 2.41 1.2-.05 1.66-.78 3.11-.78 1.45 0 1.86.78 3.13.75 1.29-.02 2.11-1.18 2.9-2.34.91-1.34 1.29-2.64 1.31-2.71-.03-.01-2.51-.96-2.53-3.84Z"/><path d="M14.9 5.36c.66-.8 1.11-1.91.99-3.02-.95.04-2.11.63-2.79 1.43-.61.71-1.15 1.85-1.01 2.94 1.07.08 2.15-.54 2.81-1.35Z"/></svg></span>
+        <span class="btn__pg-txt"><small>Coming soon</small><strong>App Store</strong></span>
+      </button>
+    </div>
+    <div class="hero__trust">
+      <div class="stars" aria-label="5.0 out of 5 stars">★★★★★</div>
+      <span><strong>5.0</strong> rating · Private &amp; offline-first · Made in India 🇮🇳</span>
+    </div>
+    <p class="hero__legal">By downloading, you agree to our <a href="terms.html">Terms</a> &amp; <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <!-- floating device + finance widgets -->
+  <div class="hero__stage reveal" data-parallax-scope>
+    <span class="orbit orbit--1" data-parallax="0.05"></span>
+    <span class="orbit orbit--2" data-parallax="0.09"></span>
+
+    <!-- floating glass widget: spend chart -->
+    <div class="floatcard floatcard--chart" data-parallax="0.16">
+      <div class="floatcard__head">
+        <span>This Month</span>
+        <b class="up">▲ 12%</b>
+      </div>
+      <div class="spark">
+        <svg viewBox="0 0 120 48" preserveAspectRatio="none">
+          <defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#10B981" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0 38 L18 30 L36 34 L54 18 L72 24 L90 9 L120 14 L120 48 L0 48 Z" fill="url(#sg)"/>
+          <path d="M0 38 L18 30 L36 34 L54 18 L72 24 L90 9 L120 14" fill="none" stroke="#10B981" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- floating glass widget: incoming transaction (auto-detect) -->
+    <div class="floatcard floatcard--txn" data-parallax="0.22">
+      <div class="txn__ico">📩</div>
+      <div class="txn__body">
+        <span class="txn__t">Auto-captured</span>
+        <span class="txn__m">Zomato · HDFC ••4821</span>
+      </div>
+      <div class="txn__amt">−₹486</div>
+    </div>
+
+    <!-- floating glass widget: budget ring -->
+    <div class="floatcard floatcard--ring" data-parallax="0.13">
+      <div class="ring">
+        <svg viewBox="0 0 44 44">
+          <circle cx="22" cy="22" r="18" fill="none" stroke="#E6EEF6" stroke-width="6"/>
+          <circle cx="22" cy="22" r="18" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="34" transform="rotate(-90 22 22)"/>
+        </svg>
+        <b>70%</b>
+      </div>
+      <div class="ring__lbl"><span>Budget</span><small>₹34,200 left</small></div>
+    </div>
+
+    <!-- the phone -->
+    <div class="phone phone--hero" data-parallax="0.04">
+      <div class="phone__frame">
+        <div class="phone__notch"></div>
+        <div class="phone__screen phone__screen--img"><img src="assets/shots/home.png?v=20260828" alt="Expensio dashboard showing net worth, accounts and recent transactions" loading="eager" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ MARQUEE / TRUST STRIP ░░░ -->
+<section class="strip">
+  <div class="strip__track">
+    <span>Auto-capture from bank SMS (Android)</span><i>✦</i>
+    <span>Credit-card billing cycles</span><i>✦</i>
+    <span>EMI tracker</span><i>✦</i>
+    <span>Smart budgets</span><i>✦</i>
+    <span>Talk to add</span><i>✦</i>
+    <span>Siri quick add (iPhone)</span><i>✦</i>
+    <span>Expensio AI</span><i>✦</i>
+    <span>100% offline</span><i>✦</i>
+    <span>Google Drive backup</span><i>✦</i>
+    <span>Multi-currency</span><i>✦</i>
+    <!-- duplicate for seamless loop -->
+    <span>Auto-capture from bank SMS (Android)</span><i>✦</i>
+    <span>Credit-card billing cycles</span><i>✦</i>
+    <span>EMI tracker</span><i>✦</i>
+    <span>Smart budgets</span><i>✦</i>
+    <span>Talk to add</span><i>✦</i>
+    <span>Siri quick add (iPhone)</span><i>✦</i>
+    <span>Expensio AI</span><i>✦</i>
+    <span>100% offline</span><i>✦</i>
+    <span>Google Drive backup</span><i>✦</i>
+    <span>Multi-currency</span><i>✦</i>
+  </div>
+</section>
+
+<!-- ░░░ HERO FEATURE: AUTO-DETECT ░░░ -->
+<section class="autodetect" id="autodetect">
+  <div class="autodetect__copy reveal">
+    <span class="eyebrow">The feature you'll never set up twice</span>
+    <h2>Your bank texts you.<br/><span class="grad-text">Expensio writes it down.</span></h2>
+    <p>
+      Every time a debit, credit or UPI notification hits your phone, Expensio reads it
+      on-device — pulling the amount, merchant and account automatically. Recognised
+      accounts are logged instantly; everything else waits as a one-tap confirmation.
+    </p>
+    <p class="autodetect__plat"><strong>This one is Android-only.</strong> Apple doesn’t allow any app to read notifications or SMS, so on iPhone you capture a spend by voice or by asking Siri instead.</p>
+    <ul class="ticks">
+      <li>Works with 20+ banks &amp; UPI apps — SBI, HDFC, ICICI, Axis, PhonePe, GPay, Paytm…</li>
+      <li>Smart de-duplication so a spend is never counted twice</li>
+      <li>Reads notifications <strong>entirely on your device</strong> — nothing is ever uploaded</li>
+    </ul>
+    <a href="#download" class="btn btn--play btn--sm">
+      <span class="btn__pg">▶</span> Try it free
+    </a>
+  </div>
+
+  <div class="autodetect__demo reveal">
+    <div class="banknotif">
+      <div class="banknotif__bar"><span class="banknotif__app">HDFC Bank</span><span class="banknotif__time">now</span></div>
+      <p>Rs.486.00 debited from a/c ••4821 to ZOMATO via UPI on 12-Jun. Not you? Call 18001234.</p>
+    </div>
+    <div class="flowarrow">
+      <svg viewBox="0 0 24 60" width="24" height="60"><path d="M12 2 V46 M5 39 l7 8 7-8" fill="none" stroke="#10B981" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="flowarrow__lbl">parsed on-device</span>
+    </div>
+    <div class="capturedrow">
+      <div class="capturedrow__ico">🍔</div>
+      <div class="capturedrow__b">
+        <span class="capturedrow__t">Zomato</span>
+        <span class="capturedrow__s">Food &amp; Dining · UPI · HDFC ••4821</span>
+      </div>
+      <div class="capturedrow__amt">−₹486</div>
+      <div class="capturedrow__badge">Auto ✓</div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ FEATURES ░░░ -->
+<section class="features" id="features">
+  <header class="sec-head reveal">
+    <span class="eyebrow">Everything in one place</span>
+    <h2>A complete money cockpit<br/>in your pocket.</h2>
+    <p class="sec-sub">Every piece working together so you always know exactly where your money goes.</p>
+  </header>
+
+  <div class="fgrid">
+    <article class="fcard reveal" style="--i:0">
+      <div class="fcard__ico ico--green">
+        <svg viewBox="0 0 24 24"><path d="M4 6h13l3 3v8a1 1 0 0 1-1 1H8l-4 4V6Z"/><path d="M8 11h8M8 14h5" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Auto-Detect Transactions</h3>
+      <p>Stop typing. Expensio reads your bank &amp; UPI notifications — pulling the amount, merchant and account for you. Recognised accounts post automatically; the rest are one tap. 100% on-device.</p>
+      <p class="fcard__note"><strong>Android only.</strong> Apple doesn’t let any app read your notifications or SMS. On iPhone you add a spend by voice inside the app, or just ask Siri — no typing either way.</p>
+    </article>
+    <article class="fcard reveal" style="--i:1">
+      <div class="fcard__ico ico--blue">
+        <svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5M8.5 21.5h7" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Talk to Add</h3>
+      <p>Just say it — "paid 480 for groceries at DMart on the ICICI card". Expensio hears the amount, merchant, category and account, and drops the entry in ready to confirm. No typing, no menus.</p>
+      <p class="fcard__note"><strong>Both platforms.</strong> Tap the mic on Android; on iPhone say <em>"Log an expense in Expensio"</em> and Siri takes it from the lock screen, Spotlight or the Action button.</p>
+    </article>
+    <article class="fcard reveal" style="--i:2">
+      <div class="fcard__ico ico--mint">
+        <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 11h18" stroke-width="2.2"/><circle cx="16.5" cy="15" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <h3>Everything in One Place</h3>
+      <p>Track your real net worth across every bank account, cash wallet, UPI and credit card — not just one pile of expenses.</p>
+    </article>
+    <article class="fcard reveal" style="--i:3">
+      <div class="fcard__ico ico--blue">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18M7 15h4" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Smart Credit Card Tracking</h3>
+      <p>Follows your actual billing cycle — not the calendar month — with utilisation %, available credit and bill-due countdowns. Even scan a card with your camera to add it.</p>
+    </article>
+    <article class="fcard reveal" style="--i:4">
+      <div class="fcard__ico ico--sky">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2.5"/><path d="M3 9h18M8 2v4M16 2v4M8 14h2M14 14h2M8 17h2" stroke-width="2.2"/></svg>
+      </div>
+      <h3>EMI Tracker</h3>
+      <p>Split a credit-card purchase into an EMI plan and track every installment — paid, due and remaining — automatically.</p>
+    </article>
+    <article class="fcard reveal" style="--i:5">
+      <div class="fcard__ico ico--green">
+        <svg viewBox="0 0 24 24"><path d="M5 13a7 7 0 0 1 14 0"/><path d="M12 13l3.5-2.5" stroke-width="2.2"/><circle cx="12" cy="13" r="1.4" fill="currentColor" stroke="none"/><path d="M4 19h16" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Budgets That Actually Help</h3>
+      <p>Overall and per-category limits with alerts at 80% &amp; 100%, smart suggestions and month-over-month comparisons — so you course-correct before overspending.</p>
+    </article>
+    <article class="fcard reveal" style="--i:6">
+      <div class="fcard__ico ico--mint">
+        <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Powerful Insights &amp; Reports</h3>
+      <p>Spending trends, category breakdowns, fixed vs. variable, monthly summaries, savings goals and exportable PDF statements.</p>
+    </article>
+    <article class="fcard reveal" style="--i:7">
+      <div class="fcard__ico ico--blue">
+        <svg viewBox="0 0 24 24"><path d="M12 3l1.7 4 4 1.7-4 1.7L12 14l-1.7-3.6-4-1.7 4-1.7L12 3Z"/><path d="M18 14l.9 2 2 .9-2 .9L18 20l-.9-2.1-2-.9 2-.9.9-2.1Z" stroke-width="1.6"/></svg>
+      </div>
+      <h3>Ask Expensio AI</h3>
+      <p>A built-in AI assistant that answers questions about your money — "How much did I spend on food this month?" — using your real data, privately.</p>
+    </article>
+    <article class="fcard reveal" style="--i:8">
+      <div class="fcard__ico ico--sky">
+        <svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Private by Design</h3>
+      <p>Fully offline, no ads, no tracking, no selling data. Optional App Lock (fingerprint/face) and encrypted Google Drive backup you control. Card numbers &amp; CVVs are never stored.</p>
+    </article>
+    <article class="fcard reveal" style="--i:9">
+      <div class="fcard__ico ico--green">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke-width="1.8"/></svg>
+      </div>
+      <h3>Multi-Currency</h3>
+      <p>Track in ₹ and view in USD, EUR, GBP and more — every amount converted at live exchange rates.</p>
+    </article>
+    <article class="fcard reveal" style="--i:10">
+      <div class="fcard__ico ico--mint">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+      </div>
+      <h3>Home-Screen Widgets</h3>
+      <p>See your balance and latest transactions at a glance — and log a spend in one tap — straight from your home screen, without even opening the app.</p>
+      <p class="fcard__note"><strong>Android only for now.</strong> Widgets land on iPhone in a later release.</p>
+    </article>
+    <article class="fcard reveal" style="--i:11">
+      <div class="fcard__ico ico--blue">
+        <svg viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="3.5"/><path d="M12 8.5v7M8.5 12h7" stroke-width="2.2"/></svg>
+      </div>
+      <h3>Quick Add from the Icon</h3>
+      <p>Long-press the Expensio icon on your home screen and go straight to Quick Add, Add Income or the voice capture — the spend is logged before the app has finished opening.</p>
+      <p class="fcard__note"><strong>Android only for now.</strong> On iPhone, Siri fills the same gap — ask it from the lock screen and you never touch the icon at all.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ░░░ SCREENSHOTS SHOWCASE ░░░ -->
+<section class="showcase" id="showcase">
+  <header class="sec-head reveal">
+    <span class="eyebrow">A look inside</span>
+    <h2>Designed to be looked at<br/>every single day.</h2>
+    <p class="sec-sub">Swipe through the screens — pixel-faithful to the real app.</p>
+  </header>
+
+  <div class="cover reveal">
+    <div class="cover__glow" aria-hidden="true"></div>
+    <button class="cover__nav cover__nav--prev" aria-label="Previous screen">‹</button>
+    <div class="cover__stage">
+      <figure class="cslide" data-cap="Dashboard &amp; Net Worth"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/home.png?v=20260828" alt="Home dashboard with net worth and accounts" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Recent Activity &amp; Trends"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/activity.png?v=20260828" alt="Recent transactions and spending trend" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Log in Seconds"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/add.png?v=20260828" alt="Add transaction screen" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Talk to Add"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/talk.png?v=20260828" alt="Voice capture screen listening for a spoken transaction" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Insights &amp; Analytics"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/insights.png?v=20260828" alt="Insights and analytics with charts" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Cards &amp; EMIs"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/cards.png?v=20260828" alt="Credit cards and EMI tracking" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Billing Cycles &amp; Utilisation"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/usage.png?v=20260828" alt="Credit card usage and billing cycle" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="Statements &amp; Export"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/statements.png?v=20260828" alt="Statements screen with filters" loading="lazy" /></div></div></div></figure>
+      <figure class="cslide" data-cap="A Warm Welcome"><div class="phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/onboarding.png?v=20260828" alt="Onboarding welcome screen" loading="lazy" /></div></div></div></figure>
+    </div>
+    <button class="cover__nav cover__nav--next" aria-label="Next screen">›</button>
+  </div>
+  <div class="cover__meta reveal">
+    <span class="cover__cap" id="coverCap">Dashboard &amp; Net Worth</span>
+    <div class="cover__dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ░░░ WHY EXPENSIO (alternating) ░░░ -->
+<section class="why" id="why">
+  <header class="sec-head reveal">
+    <span class="eyebrow">Why Expensio</span>
+    <h2>Money software that respects<br/>your time and your privacy.</h2>
+  </header>
+
+  <div class="whyrow reveal">
+    <div class="whyrow__text">
+      <span class="whyrow__num">01</span>
+      <h3>Radical simplicity</h3>
+      <p>No spreadsheets, no friction. A clean, spacious interface puts the number that matters — what's left — front and centre. Adding a transaction takes one tap; most are added for you.</p>
+    </div>
+    <div class="whyrow__art">
+      <div class="mini phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/add.png?v=20260828" alt="Add transaction in seconds" loading="lazy" /></div></div></div>
+    </div>
+  </div>
+
+  <div class="whyrow whyrow--rev reveal">
+    <div class="whyrow__text">
+      <span class="whyrow__num">02</span>
+      <h3>Built for speed</h3>
+      <p>Fully native on each platform — instant cold starts and charts that animate at 60fps. On Android, two home-screen widgets and an app-icon shortcut let you log a spend without even opening the app; on iPhone, Siri does the same in a sentence.</p>
+    </div>
+    <div class="whyrow__art">
+      <div class="illus illus--speed">
+        <div class="illus__bars"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="illus__chip">⚡ Instant</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="whyrow reveal">
+    <div class="whyrow__text">
+      <span class="whyrow__num">03</span>
+      <h3>Privacy by design</h3>
+      <p>Expensio is offline-first. There are no ads, no third-party trackers and no analytics SDKs. Your finances stay on your device, encrypted in an optional backup only you control on your own Google Drive.</p>
+    </div>
+    <div class="whyrow__art">
+      <div class="illus illus--privacy">
+        <svg viewBox="0 0 120 120"><path d="M60 14 24 28v30c0 24 16 41 36 50 20-9 36-26 36-50V28L60 14Z" fill="none" stroke="#2563EB" stroke-width="3.5"/><path d="m46 60 10 10 20-22" fill="none" stroke="#10B981" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="illus__tag">No trackers · No ads</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="whyrow whyrow--rev reveal">
+    <div class="whyrow__text">
+      <span class="whyrow__num">04</span>
+      <h3>Real financial awareness</h3>
+      <p>Credit-card billing cycles, EMI plans, brand-level spending and month-over-month comparisons give you the full picture — not just a pile of receipts. You see patterns you'd otherwise miss.</p>
+    </div>
+    <div class="whyrow__art">
+      <div class="mini phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/insights.png?v=20260828" alt="Insights with weekly activity and distribution" loading="lazy" /></div></div></div>
+    </div>
+  </div>
+
+  <div class="whyrow reveal">
+    <div class="whyrow__text">
+      <span class="whyrow__num">05</span>
+      <h3>Better spending habits</h3>
+      <p>Credit-card utilisation alerts, EMI tracking and clean monthly statements keep you ahead of every bill — turning tracking into lasting habits and, eventually, real savings.</p>
+    </div>
+    <div class="whyrow__art">
+      <div class="mini phone"><div class="phone__frame"><div class="phone__screen phone__screen--img"><img src="assets/shots/usage.png?v=20260828" alt="Credit card usage and billing cycle overview" loading="lazy" /></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ PRIVACY-FIRST ARCHITECTURE ░░░ -->
+<section class="arch" id="security">
+  <header class="sec-head reveal">
+    <span class="arch__eyebrow">
+      <svg viewBox="0 0 24 24" width="15" height="15"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      100% Privacy-First Architecture
+    </span>
+    <h2>Your financial blueprint<br/>in your&nbsp;control.</h2>
+    <p class="sec-sub">Tailored with zero cloud vulnerability. Expensio is engineered offline-first by default, ensuring your transaction &amp; bank credentials never leave your physical device.</p>
+  </header>
+
+  <div class="arch__toggle reveal" role="tablist" aria-label="Storage mode">
+    <button class="arch__tab is-active" data-mode="local" role="tab" aria-selected="true">
+      <svg viewBox="0 0 24 24" width="17" height="17"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+      Local Only <span>(Default)</span><i class="arch__livedot"></i>
+    </button>
+    <button class="arch__tab" data-mode="cloud" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" width="17" height="17"><path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.3A3.5 3.5 0 0 1 17 18H7Z"/></svg>
+      Cloud Sync <span>(Optional Backup)</span>
+    </button>
+  </div>
+
+  <div class="arch__grid reveal">
+    <!-- LEFT — flow diagram + terminal -->
+    <div class="arch__stage">
+      <div class="arch__fingerprint" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M50 14c-18 0-30 14-30 32v18"/><path d="M50 24c-12 0-20 9-20 22v16"/>
+          <path d="M50 34c-7 0-12 5-12 12v18"/><path d="M50 44c-2 0-4 2-4 4v18"/>
+          <path d="M50 14c18 0 30 14 30 32v6"/><path d="M50 24c12 0 20 9 20 22v10"/>
+          <path d="M50 34c7 0 12 5 12 12v14"/><path d="M54 48v18"/>
+        </g></svg>
+      </div>
+
+      <div class="arch__stage-head">
+        <div>
+          <h3 class="arch__stage-title">
+            <span class="arch__si m-local">🗄</span><span class="arch__si m-cloud">🔄</span>
+            <span class="m-local">On-Device Sandbox</span><span class="m-cloud">Encrypted Vault Synchronization</span>
+          </h3>
+          <p class="arch__stage-sub"><span class="m-local">No data packets ever cross the physical radio.</span><span class="m-cloud">Zero centralized servers. Locked via client-side keys.</span></p>
+        </div>
+        <span class="arch__statusbadge"><i></i><span class="m-local">Offline Secure</span><span class="m-cloud">End-to-End Crypto</span></span>
+      </div>
+
+      <div class="arch__flow">
+        <div class="node node--device">
+          <div class="node__ico"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 18h2"/></svg></div>
+          <span class="node__name">Your Device</span>
+          <span class="node__tag">SQLite DB</span>
+        </div>
+
+        <div class="wire">
+          <div class="wire__track"></div>
+          <div class="wire__flow"></div>
+          <span class="pkt"></span><span class="pkt"></span><span class="pkt"></span>
+          <div class="wire__mid m-local">
+            <span class="wire__x">✕</span>
+            <span class="wire__lbl wire__lbl--no">NO RADIO OUT</span>
+          </div>
+          <div class="wire__mid m-cloud">
+            <span class="wire__lock"><svg viewBox="0 0 24 24" width="13" height="13"><rect x="5" y="11" width="14" height="9" rx="2" fill="currentColor"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+            <span class="wire__lbl wire__lbl--e2ee">E2EE TUNNEL</span>
+          </div>
+        </div>
+
+        <div class="node node--cloud">
+          <div class="node__ico"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.3A3.5 3.5 0 0 1 17 18H7Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <span class="node__name m-local">Cloud Storage</span><span class="node__name m-cloud">Google Drive</span>
+          <span class="node__tag m-local">Unreachable</span><span class="node__tag m-cloud">Your Vault</span>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal__top">Simulated Security Logic Logs <span class="terminal__run"><i></i> RUNNING</span></div>
+        <div class="terminal__body m-local">
+          <p><span class="tg">&gt;</span> <span class="ti">[INITIALIZED]</span> Sandboxed SQLite core interface.</p>
+          <p><span class="tg">&gt;</span> Parsing ICICI / HDFC local inbox messages…</p>
+          <p><span class="tg">&gt;</span> <span class="tb">STATUS:</span> 100% On-Device storage locked. zero network outbound logged.<span class="cursor"></span></p>
+        </div>
+        <div class="terminal__body m-cloud">
+          <p><span class="tg">&gt;</span> <span class="ti">[E2EE GENERATED]</span> AES-256 client master password hash created.</p>
+          <p><span class="tg">&gt;</span> Authenticating to Private Google Drive application folder via OAuth…</p>
+          <p><span class="tg">&gt;</span> <span class="tgreen">STATUS:</span> Databases synced safely. Encrypted blocks written securely!<span class="cursor"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT — integrity panel -->
+    <aside class="arch__panel">
+      <span class="arch__panel-badge">Architectural Integrity</span>
+      <h3 class="m-local">Why Local Only is the Gold Standard:</h3>
+      <h3 class="m-cloud">How Private Cloud Sync protects you:</h3>
+      <p class="arch__panel-lead">Unlike traditional personal-finance trackers that suck your bank logs into secondary web platforms, Expensio guarantees complete sovereign control.</p>
+
+      <ul class="arch__pts m-local">
+        <li><span class="tick"></span><div><b>Zero Signup Friction</b><small>Start tracking immediately without email, password, or credit-card verifications.</small></div></li>
+        <li><span class="tick"></span><div><b>Zero Target Ads or Sellouts</b><small>Your wealth data is never converted into profiles to sell you credit cards or loans.</small></div></li>
+        <li><span class="tick"></span><div><b>No Server Breach Worry</b><small>If a company server gets compromised, your data is 100% immune — because it doesn't exist there.</small></div></li>
+      </ul>
+      <ul class="arch__pts m-cloud">
+        <li><span class="tick"></span><div><b>AES-256 On-Device Encryption</b><small>Data blocks are sealed with encryption keys that only you hold. No one else can read them.</small></div></li>
+        <li><span class="tick"></span><div><b>No Third-Party Intermediaries</b><small>Synced strictly to your own Google Drive container, directly from your handset.</small></div></li>
+        <li><span class="tick"></span><div><b>Automated Fluid Backups</b><small>Switching to a new device is simple: connect your private vault, load the database, and carry on.</small></div></li>
+      </ul>
+
+      <div class="arch__guarantee">
+        <span class="arch__shield"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><b>Security Guaranteed</b><small>Certified under absolute client sandbox boundaries.</small></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ░░░ STATISTICS ░░░ -->
+<section class="stats" id="stats">
+  <header class="sec-head reveal">
+    <span class="eyebrow">By the numbers</span>
+    <h2>Small, fast and honest.</h2>
+    <p class="sec-sub">Real numbers from a privacy-first app in its early days.</p>
+  </header>
+  <div class="stats__grid">
+    <div class="stat reveal">
+      <div class="stat__ico"><svg viewBox="0 0 24 24"><path d="M4 8l3.6 3.2L12 5l4.4 6.2L20 8l-1.5 9.4H5.5L4 8Z"/><path d="M5.5 20.5h13"/></svg></div>
+      <b class="count" data-to="20" data-suffix="+">0</b>
+      <span class="stat__lbl">Pro Features</span>
+      <p class="stat__desc">Premium-grade tools in a free app — budgets, cards, EMIs, AI &amp; more</p>
+    </div>
+    <div class="stat reveal">
+      <div class="stat__ico"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 18.6 6.8 19l1-5.8L3.5 9.2l5.9-.9L12 3Z"/></svg></div>
+      <b class="count" data-to="5" data-decimals="1" data-suffix="/5">0</b>
+      <span class="stat__lbl">Average Rating</span>
+      <p class="stat__desc">100% perfect score across all 4 organic reviews</p>
+    </div>
+    <div class="stat reveal">
+      <div class="stat__ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+      <b class="count" data-to="150" data-suffix="ms">0</b>
+      <span class="stat__lbl">Cold Boot Latency</span>
+      <p class="stat__desc">Built in lightweight native code; starts instantly</p>
+    </div>
+    <div class="stat reveal">
+      <div class="stat__ico"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/></svg></div>
+      <b class="count" data-to="0" data-suffix="%">0</b>
+      <span class="stat__lbl">User Data Collected</span>
+      <p class="stat__desc">Stored in physical device memory; zero cloud trackers</p>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ UPDATES TIMELINE ░░░ -->
+<section class="updates" id="updates">
+  <header class="sec-head reveal">
+    <span class="eyebrow">Always improving</span>
+    <h2>Release timeline</h2>
+    <p class="sec-sub">A steady drumbeat of features, polish and fixes.</p>
+  </header>
+
+  <ol class="timeline">
+    <li class="tl reveal">
+      <div class="tl__dot"></div>
+      <div class="tl__card">
+        <div class="tl__top"><span class="tl__ver">v2.0.5</span><span class="tl__tag tag--now">Active Latest</span><span class="tl__date">Jun 9, 2026</span></div>
+        <h4>Multi-Currency, App Lock &amp; Insights</h4>
+        <ul>
+          <li><i class="new">New</i> Multi-currency — pick your currency and see every amount converted at live rates</li>
+          <li><i class="new">New</i> App Lock — secure Expensio with fingerprint, face or PIN; locks every time you open it</li>
+          <li><i class="imp">Improved</i> Budgets — cleaner status labels and quicker limit editing</li>
+          <li><i class="imp">Improved</i> Insights — clearer yearly chart and a "See All" view for transactions</li>
+          <li><i class="imp">Improved</i> Refreshed login screen</li>
+          <li><i class="fix">Fixed</i> Bug fixes &amp; UI enhancements</li>
+        </ul>
+      </div>
+    </li>
+    <li class="tl reveal">
+      <div class="tl__dot"></div>
+      <div class="tl__card">
+        <div class="tl__top"><span class="tl__ver">v2.0.4</span><span class="tl__date">May 26, 2026</span></div>
+        <h4>Auto-Updates &amp; Profile Feedback Rating</h4>
+        <ul>
+          <li><i class="new">New</i> Smoother updates — the app now keeps itself up to date automatically</li>
+          <li><i class="new">New</i> Added a quick way to rate Expensio and share feedback right from your profile</li>
+          <li><i class="imp">Improved</i> Performance improvements and minor bug fixes</li>
+        </ul>
+      </div>
+    </li>
+    <li class="tl reveal">
+      <div class="tl__dot"></div>
+      <div class="tl__card">
+        <div class="tl__top"><span class="tl__ver">v2.0.3</span><span class="tl__date">May 21, 2026</span></div>
+        <h4>Cards Overhaul &amp; Global Balances Toggle</h4>
+        <ul>
+          <li><i class="new">New</i> Cardholder name + valid-thru fields on accounts &amp; credit cards, shown on the card face</li>
+          <li><i class="new">New</i> Hide/show balances across the app with one global eye toggle</li>
+          <li><i class="new">New</i> Edit Account now opens as a bottom sheet, color picker is scrollable</li>
+          <li><i class="imp">Improved</i> Hero card on Profile with photo, name, and email</li>
+          <li><i class="imp">Improved</i> Swipe-to-delete on every transaction list; transaction cards unified to one design</li>
+          <li><i class="fix">Fixed</i> EMI link no longer lost when editing an installment</li>
+        </ul>
+      </div>
+    </li>
+    <li class="tl reveal">
+      <div class="tl__dot"></div>
+      <div class="tl__card">
+        <div class="tl__top"><span class="tl__ver">v2.0.2</span><span class="tl__date">May 17, 2026</span></div>
+        <h4>Tab Layouts, Auto-Backup &amp; Account Filters</h4>
+        <ul>
+          <li><i class="new">New</i> New tab layout: dedicated Cards tab + Accounts dashboard</li>
+          <li><i class="new">New</i> Per-account filtering on Home — tap any account to filter income, expenses, transactions and trends</li>
+          <li><i class="new">New</i> Per-card billing-cycle view with Available/Limit on every card</li>
+          <li><i class="new">New</i> Refund/Cashback transactions (separate from Income)</li>
+          <li><i class="new">New</i> Google Drive auto-backup with explicit 'pick a file' restore flow</li>
+          <li><i class="new">New</i> Archive accounts (with Undo)</li>
+          <li><i class="new">New</i> Brand picker for quick transaction entry</li>
+          <li><i class="new">New</i> Multi-bank SMS auto-capture</li>
+        </ul>
+      </div>
+    </li>
+    <li class="tl reveal">
+      <div class="tl__dot"></div>
+      <div class="tl__card">
+        <div class="tl__top"><span class="tl__ver">v2.0.1</span><span class="tl__date">May 13, 2026</span></div>
+        <h4>Credit Card EMI &amp; Optimizations</h4>
+        <ul>
+          <li><i class="new">New</i> Added EMI options for credit card transactions</li>
+          <li><i class="fix">Fixed</i> Bug fixes and performance improvements</li>
+        </ul>
+      </div>
+    </li>
+    <li class="tl reveal">
+      <div class="tl__dot"></div>
+      <div class="tl__card">
+        <div class="tl__top"><span class="tl__ver">v2.0.0</span><span class="tl__date">May 12, 2026</span></div>
+        <h4>Credit Card Refunds &amp; Interactive Insights</h4>
+        <ul>
+          <li><i class="new">New</i> Credit Card Refunds — add refund, cashback &amp; reward-point entries for credit cards; usage calculations now account for refunds</li>
+          <li><i class="new">New</i> Smart Pending Bills — only shows bills that are due, not in-progress cycles</li>
+          <li><i class="new">New</i> Interactive Insights — tap any bar in the chart to see the spending breakdown for that period; tap again to reset</li>
+          <li><i class="imp">Improved</i> Smoother experience — replaced push notifications with in-app toasts for transactions</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ░░░ UPCOMING / ROADMAP ░░░ -->
+<section class="roadmap" id="roadmap">
+  <header class="sec-head reveal">
+    <span class="eyebrow">On the horizon</span>
+    <h2>What's coming next</h2>
+    <p class="sec-sub">A peek at the roadmap we're building toward.</p>
+  </header>
+
+  <div class="rgrid">
+    <article class="rcard reveal"><span class="rcard__soon">Planned · Q4 2026</span>
+      <div class="rcard__ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 5H3l9-5Z"/><path d="M4 10h16M6 10v7M10 10v7M14 10v7M18 10v7M4 20h16"/></svg></div>
+      <h3>Loan Tracker</h3><p>Track personal loans and borrowings — principal, interest, EMI due dates and repayment progress — separate from your everyday accounts and cards.</p></article>
+    <article class="rcard reveal"><span class="rcard__soon">Planned · Q4 2026</span>
+      <div class="rcard__ico"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+      <h3>Tax Planner</h3><p>Estimate your tax liability, track deductions and tax-saving investments, and stay ready for filing season with a clear year-round summary.</p></article>
+    <article class="rcard reveal"><span class="rcard__soon">Planned · Q4 2026</span>
+      <div class="rcard__ico"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></div>
+      <h3>Business Profile</h3><p>Keep freelance or small-business income and expenses in a dedicated profile, separate from personal finances, with its own reports.</p></article>
+    <article class="rcard reveal"><span class="rcard__soon">Planned · Q4 2026</span>
+      <div class="rcard__ico"><svg viewBox="0 0 24 24"><path d="M7 19a4.4 4.4 0 0 1-.5-8.8 6 6 0 0 1 11.4 1.5A3.9 3.9 0 0 1 17 19H7Z"/><rect x="10" y="12.6" width="4" height="3.2" rx="0.8"/><path d="M10.9 12.6v-.9a1.1 1.1 0 0 1 2.2 0v.9"/></svg></div>
+      <h3>Encrypted Cloud Sync</h3><p>Industry-standard AES-256 cloud backup sync across multiple devices without sacrificing physical privacy.</p></article>
+    <article class="rcard reveal"><span class="rcard__soon">Shipping · September 2026</span>
+      <div class="rcard__ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="13" height="10" rx="1.5"/><path d="M5 17.5h7M8.5 14v3.5"/><rect x="14.5" y="8" width="7.5" height="13" rx="1.8"/><path d="M17.5 18.7h1.5"/></svg></div>
+      <h3>Expensio for iPhone</h3><p>The full tracker on iOS, with Siri quick add built in — say "log an expense in Expensio" and it’s recorded. Widgets, icon shortcuts and the web app follow after launch.</p></article>
+    <article class="rcard reveal rcard--cta">
+      <div class="rcard__ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4V5Z"/><circle cx="9" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="12.5" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="10.5" r="1" fill="currentColor" stroke="none"/></svg></div>
+      <h3>Your idea here</h3><p>Tell us what to build next.</p><a href="mailto:support.expensio@gmail.com?subject=Feature%20Idea%20for%20Expensio&body=Hi%20Expensio%20team%2C%0A%0AI%20have%20an%20idea%20I%20would%20love%20to%20see%20in%20Expensio%3A%0A%0A1.%20%0A2.%20%0A3.%20%0A%0AWhy%20it%20would%20help%20me%3A%0A%0A%0AThanks!" class="rcard__link">Request a feature →</a></article>
+  </div>
+</section>
+
+<!-- ░░░ TESTIMONIALS ░░░ -->
+<section class="testi" id="testimonials">
+  <header class="sec-head reveal">
+    <span class="eyebrow">Loved by savers</span>
+    <h2>People are talking.</h2>
+  </header>
+  <div class="tmarquee reveal">
+    <div class="tmarquee__track">
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent app for daily expense tracking. It makes logging transactions so friction free that I'm actually sticking to the habit this time. Seeing my monthly expenses neatly organized is a game changer for my budget."</blockquote>
+        <figcaption><span class="av av--1">P</span><div><b>Praful</b><small>Software Engineer · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"One of the best budget planner apps I've tried. The reports and expense summaries are very helpful for understanding monthly spending. Highly recommended for students and professionals."</blockquote>
+        <figcaption><span class="av av--2">D</span><div><b>Dr. Nibedita</b><small>PhD in Sociology · Odisha</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent expense tracker with a clean interface and useful features. Adding expenses is fast, and the reports help me understand where my money goes. Great app for daily expense tracking and savings management."</blockquote>
+        <figcaption><span class="av av--3">S</span><div><b>Smruti</b><small>System Administrator · Kolkata</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Expensio is simple, clean, and super easy to use. It helped me track my daily expenses effortlessly and stay organized with my spending. Highly recommended for anyone looking to manage their finances better! It's fully free with all pro features."</blockquote>
+        <figcaption><span class="av av--4">S</span><div><b>SRN</b><small>Tech Lead · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Expensio app works like my guide to spending management. I can better understand where my most unwanted, day-to-day expenses are going, plus it gives me a great overall view of my finances. I am now in better control. Thanks to its makers."</blockquote>
+        <figcaption><span class="av av--5">S</span><div><b>Suraj Jaiswal</b><small>Content Writer · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Fast, reliable, and easy to understand. One of the best expense tracker apps I've used."</blockquote>
+        <figcaption><span class="av av--6">S</span><div><b>Shivam Mittal</b><small>Full Stack Developer · Ghaziabad</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"It is a good app to track daily expenses."</blockquote>
+        <figcaption><span class="av av--7">D</span><div><b>Debananda Mahapatra</b><small>Mobile Developer · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="stars">★★★★★</div>
+        <blockquote>"What makes Expensio stand out from other expense tracker apps is that it isn't just another app for manually adding expenses — it actually helps users manage money intelligently. The feature I liked the most is the automatic SMS transaction detection. Instead of entering every expense manually, the app can detect eligible bank transaction messages and convert them into expense records, which saves a lot of time."</blockquote>
+        <figcaption><span class="av av--8">R</span><div><b>Rasmita Nayak</b><small>Team Lead · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent app for daily expense tracking. It makes logging transactions so friction free that I'm actually sticking to the habit this time. Seeing my monthly expenses neatly organized is a game changer for my budget."</blockquote>
+        <figcaption><span class="av av--1">P</span><div><b>Praful</b><small>Software Engineer · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"One of the best budget planner apps I've tried. The reports and expense summaries are very helpful for understanding monthly spending. Highly recommended for students and professionals."</blockquote>
+        <figcaption><span class="av av--2">D</span><div><b>Dr. Nibedita</b><small>PhD in Sociology · Odisha</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent expense tracker with a clean interface and useful features. Adding expenses is fast, and the reports help me understand where my money goes. Great app for daily expense tracking and savings management."</blockquote>
+        <figcaption><span class="av av--3">S</span><div><b>Smruti</b><small>System Administrator · Kolkata</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Expensio is simple, clean, and super easy to use. It helped me track my daily expenses effortlessly and stay organized with my spending. Highly recommended for anyone looking to manage their finances better! It's fully free with all pro features."</blockquote>
+        <figcaption><span class="av av--4">S</span><div><b>SRN</b><small>Tech Lead · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Expensio app works like my guide to spending management. I can better understand where my most unwanted, day-to-day expenses are going, plus it gives me a great overall view of my finances. I am now in better control. Thanks to its makers."</blockquote>
+        <figcaption><span class="av av--5">S</span><div><b>Suraj Jaiswal</b><small>Content Writer · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Fast, reliable, and easy to understand. One of the best expense tracker apps I've used."</blockquote>
+        <figcaption><span class="av av--6">S</span><div><b>Shivam Mittal</b><small>Full Stack Developer · Ghaziabad</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"It is a good app to track daily expenses."</blockquote>
+        <figcaption><span class="av av--7">D</span><div><b>Debananda Mahapatra</b><small>Mobile Developer · Bangalore</small></div></figcaption>
+      </figure>
+      <figure class="tcard" aria-hidden="true">
+        <div class="stars">★★★★★</div>
+        <blockquote>"What makes Expensio stand out from other expense tracker apps is that it isn't just another app for manually adding expenses — it actually helps users manage money intelligently. The feature I liked the most is the automatic SMS transaction detection. Instead of entering every expense manually, the app can detect eligible bank transaction messages and convert them into expense records, which saves a lot of time."</blockquote>
+        <figcaption><span class="av av--8">R</span><div><b>Rasmita Nayak</b><small>Team Lead · Bangalore</small></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ FAQ ░░░ -->
+<section class="faq" id="faq">
+  <header class="sec-head reveal">
+    <span class="eyebrow">Questions</span>
+    <h2>Good to know</h2>
+  </header>
+  <div class="acc reveal">
+    <details class="acc__item">
+      <summary>How does auto-detecting transactions work?<span class="acc__plus"></span></summary>
+      <div class="acc__body"><p>On Android, with your permission, Expensio reads incoming bank and UPI notifications on your device, extracts the amount, merchant and account, and logs the transaction. Recognised accounts are captured automatically; anything ambiguous waits as a one-tap confirmation. The parsing happens entirely on your phone — nothing is ever uploaded.</p><p><strong>On iPhone this isn’t possible</strong> — Apple doesn’t let any app read notifications or SMS. Instead you add a spend by voice in the app or by asking Siri, which takes about as long as reading the notification would.</p></div>
+    </details>
+    <details class="acc__item">
+      <summary>Which platforms is Expensio on?<span class="acc__plus"></span></summary>
+      <div class="acc__body"><p>Expensio is on Android today, and lands on iPhone in September 2026. Everything core is identical on both — accounts, credit-card cycles, EMIs, budgets, insights, backups and offline-first privacy.</p><p>Two things differ at iOS launch. <strong>Automatic capture from bank notifications is Android-only</strong>, because Apple doesn’t permit it — iPhone users add a spend by voice or via Siri. <strong>Home-screen widgets and app-icon shortcuts are also Android-only for now</strong>, and follow on iOS in a later release.</p></div>
+    </details>
+    <details class="acc__item">
+      <summary>Is my financial data private and secure?<span class="acc__plus"></span></summary>
+      <div class="acc__body"><p>Yes. Expensio is offline-first with no ads and no third-party trackers. Your data lives in a local database on your device, protected by an optional biometric App Lock. Backups go only to your own Google Drive, and full card numbers and CVVs are never stored.</p></div>
+    </details>
+    <details class="acc__item">
+      <summary>Does it work without internet?<span class="acc__plus"></span></summary>
+      <div class="acc__body"><p>Completely. Every core feature — tracking, budgets, analytics, cards and EMIs — works fully offline. An internet connection is only needed for optional extras like Google Drive backup and live currency rates.</p></div>
+    </details>
+    <details class="acc__item">
+      <summary>Is Expensio free?<span class="acc__plus"></span></summary>
+      <div class="acc__body"><p>Yes — the core experience is free, including expense &amp; income tracking, budgets and App Lock. Expensio Pro unlocks unlimited accounts &amp; cards, advanced statistics, PDF statements, custom categories and Expensio AI, with a free trial.</p></div>
+    </details>
+    <details class="acc__item">
+      <summary>Can I back up and move my data?<span class="acc__plus"></span></summary>
+      <div class="acc__body"><p>Absolutely. Auto and manual backups sync to your own Google Drive, and you can export your full history to CSV or JSON at any time. You own your data, always.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ░░░ FINAL CTA / DOWNLOAD ░░░ -->
+<section class="finalcta" id="download">
+  <div class="finalcta__inner reveal">
+    <div class="finalcta__glow"></div>
+    <img src="assets/wordmark-logo.png?v=20260828" alt="Expensio" class="finalcta__logo" width="771" height="176" />
+    <h2>Start Your Financial<br/>Journey Today.</h2>
+    <p>Take control of every rupee — privately, beautifully, automatically.</p>
+    <div class="finalcta__cta">
+    <a href="https://play.google.com/store/apps/details?id=com.ozoteaapps.expensio" target="_blank" rel="noopener" class="btn btn--play btn--lg">
+      <span class="btn__pg-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#34D399" d="M3.6 2.3 13 12 3.6 21.7a1 1 0 0 1-.6-.9V3.2a1 1 0 0 1 .6-.9Z"/><path fill="#60A5FA" d="m13 12 3.1-3.1 4.4 2.5a1 1 0 0 1 0 1.7l-4.4 2.5L13 12Z"/><path fill="#2563EB" d="M3.6 2.3 16.1 8.9 13 12 3.6 2.3Z"/><path fill="#16A34A" d="M3.6 21.7 13 12l3.1 3.1L3.6 21.7Z"/></svg>
+      </span>
+      <span class="btn__pg-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
+    </a>
+    <button type="button" class="btn btn--appstore btn--lg" data-coming-soon>
+      <span class="btn__pg-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.05 12.53c-.02-2.4 1.96-3.55 2.05-3.61-1.12-1.63-2.86-1.86-3.48-1.88-1.48-.15-2.89.87-3.64.87-.75 0-1.91-.85-3.14-.83-1.61.02-3.1.94-3.93 2.38-1.68 2.91-.43 7.22 1.2 9.58.8 1.16 1.75 2.46 3 2.41 1.2-.05 1.66-.78 3.11-.78 1.45 0 1.86.78 3.13.75 1.29-.02 2.11-1.18 2.9-2.34.91-1.34 1.29-2.64 1.31-2.71-.03-.01-2.51-.96-2.53-3.84Z"/><path d="M14.9 5.36c.66-.8 1.11-1.91.99-3.02-.95.04-2.11.63-2.79 1.43-.61.71-1.15 1.85-1.01 2.94 1.07.08 2.15-.54 2.81-1.35Z"/></svg></span>
+      <span class="btn__pg-txt"><small>Coming soon</small><strong>App Store</strong></span>
+      </button>
+    </div>
+    <div class="finalcta__meta"><span class="stars">★★★★★</span> 5.0 · Free · Android 8.0+ · iPhone from September</div>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer class="footer" id="contact">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <a href="#top" class="brand"><img src="assets/mark.png?v=20260828" alt="" class="brand__mark" width="120" height="120" /><span class="brand__name">Expensio</span></a>
+      <p>Take control of every rupee. The private, offline-first expense tracker that logs your spending for you.</p>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h5>Product</h5>
+        <a href="#features">Features</a>
+        <a href="#showcase">Screens</a>
+        <a href="#updates">Updates</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <a href="#why">Why Expensio</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="mailto:support.expensio@gmail.com">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:support.expensio@gmail.com">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 Expensio. All rights reserved.</span>
+    <span>Made with care in India 🇮🇳</span>
+  </div>
+</footer>
+
+<a href="#download" class="fab">
+  <span class="btn__pg">▶</span> Download
+</a>
+
+<script src="script.js?v=20260828"></script>
+</body>
+</html>
