@@ -757,6 +757,7 @@ section{position:relative;padding:120px clamp(20px,5vw,40px);max-width:var(--max
   .hero__copy{display:grid;justify-items:center}
   .hero__sub{max-width:600px}
   .hero__stage{height:540px;margin-top:20px}
+  .phone--hero{--pw:230px}
   .autodetect{grid-template-columns:1fr;gap:40px}
   .autodetect__copy{text-align:center;justify-items:center;display:grid}
   .ticks{text-align:left}
