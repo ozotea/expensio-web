@@ -770,8 +770,7 @@ section{position:relative;padding:120px clamp(20px,5vw,40px);max-width:var(--max
   .tmarquee__track{animation-duration:32s}
   .footer__top{grid-template-columns:1fr}
   /* mobile nav: hamburger + dropdown */
-  .nav__toggle{display:flex}
-  .nav .nav__cta{margin-left:auto}
+  .nav__toggle{display:flex;margin-left:auto}
   .nav__links{position:absolute;top:calc(100% + 12px);left:0;right:0;margin-left:0;
     flex-direction:column;gap:4px;padding:12px;
     background:rgba(255,255,255,.92);backdrop-filter:blur(20px) saturate(1.4);
@@ -818,3 +817,23 @@ section{position:relative;padding:120px clamp(20px,5vw,40px);max-width:var(--max
 .toast strong{font-family:var(--font-d);font-weight:700}
 @media(prefers-reduced-motion:reduce){.toast{transition:opacity .2s}}
 @media(max-width:560px){.toast{bottom:88px;padding:13px 18px;font-size:.9rem}}
+
+/* ============ cookie consent ============ */
+.cookiebar{position:fixed;left:50%;bottom:24px;z-index:10000;transform:translate(-50%,0);
+  display:flex;align-items:center;flex-wrap:wrap;gap:16px;width:min(640px,calc(100vw - 32px));
+  padding:18px 22px;border-radius:20px;background:rgba(11,26,43,.94);color:#fff;
+  backdrop-filter:blur(14px);box-shadow:0 24px 60px -18px rgba(11,26,43,.6);
+  font-size:.92rem;line-height:1.45;opacity:0;pointer-events:none;
+  transition:opacity .32s var(--ease),transform .32s var(--ease)}
+.cookiebar.is-on{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+.cookiebar[hidden]{display:none}
+.cookiebar p{flex:1 1 260px;margin:0;color:rgba(255,255,255,.88)}
+.cookiebar a{color:#fff;text-decoration:underline}
+.cookiebar__actions{display:flex;gap:10px;flex:0 0 auto;margin-left:auto}
+.cookiebar .btn--ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)}
+.cookiebar .btn--ghost:hover{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.4)}
+@media(max-width:560px){
+  .cookiebar{bottom:88px;padding:16px 18px;font-size:.88rem}
+  .cookiebar__actions{flex:1 1 100%;margin-left:0}
+  .cookiebar__actions .btn{flex:1}
+}

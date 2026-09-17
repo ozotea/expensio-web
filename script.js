@@ -279,6 +279,27 @@
     soonBtns.forEach((b) => b.addEventListener("click", showToast));
   }
 
+  /* ---------- Cookie consent ---------- */
+  const cookiebar = document.getElementById("cookiebar");
+  if (cookiebar) {
+    try {
+      if (!localStorage.getItem("expensio_cookie_consent")) {
+        cookiebar.hidden = false;
+        requestAnimationFrame(() => cookiebar.classList.add("is-on"));
+      }
+    } catch (e) { /* localStorage unavailable — leave banner hidden */ }
+
+    const setConsent = (value) => {
+      cookiebar.classList.remove("is-on");
+      setTimeout(() => { cookiebar.hidden = true; }, 320);
+      try { localStorage.setItem("expensio_cookie_consent", value); } catch (e) {}
+    };
+    const acceptBtn = document.getElementById("cookieAccept");
+    const declineBtn = document.getElementById("cookieDecline");
+    if (acceptBtn) acceptBtn.addEventListener("click", () => setConsent("accepted"));
+    if (declineBtn) declineBtn.addEventListener("click", () => setConsent("declined"));
+  }
+
   /* ---------- FAQ: single-open accordion ---------- */
   const items = document.querySelectorAll(".acc__item");
   items.forEach((it) => {
