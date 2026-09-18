@@ -48,7 +48,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overscroll-behavior:none}
 body{
   font-family:var(--font-b);
   background:var(--paper);
@@ -56,6 +56,7 @@ body{
   line-height:1.6;
   font-size:17px;
   overflow-x:hidden;
+  overscroll-behavior:none;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
@@ -352,13 +353,13 @@ section{position:relative;padding:120px clamp(20px,5vw,40px);max-width:var(--max
 
 
 /* ============ SHOWCASE — 3D COVERFLOW ============ */
-.cover{position:relative;height:600px;display:flex;align-items:center;justify-content:center;perspective:2000px;margin-top:4px;overflow:hidden}
+.cover{position:relative;height:600px;display:flex;align-items:center;justify-content:center;-webkit-perspective:2000px;perspective:2000px;margin-top:4px;overflow:hidden;touch-action:pan-y}
 .cover__glow{position:absolute;width:min(620px,80vw);height:440px;border-radius:50%;z-index:0;
   background:radial-gradient(circle at 50% 46%,rgba(37,99,235,.20),rgba(16,185,129,.12) 42%,transparent 68%);filter:blur(26px);animation:coverglow 7s ease-in-out infinite}
 @keyframes coverglow{50%{transform:scale(1.09);opacity:.82}}
-.cover__stage{position:relative;width:100%;max-width:900px;height:100%;transform-style:preserve-3d}
+.cover__stage{position:relative;width:100%;max-width:900px;height:100%;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 .cslide{position:absolute;top:50%;left:50%;width:282px;cursor:pointer;
-  transition:transform .8s cubic-bezier(.22,.75,.18,1),opacity .6s ease,filter .6s ease;will-change:transform,opacity;backface-visibility:hidden}
+  transition:transform .8s cubic-bezier(.22,.75,.18,1),opacity .6s ease,filter .6s ease;will-change:transform,opacity;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .cslide .phone{--pw:282px;width:100%;transition:filter .55s var(--ease)}
 .cslide:not(.is-active){filter:saturate(.92)}
 .cslide:not(.is-active) .phone{filter:drop-shadow(0 26px 46px rgba(16,40,70,.20)) brightness(.94)}
