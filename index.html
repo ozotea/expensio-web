@@ -22,6 +22,90 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css?v=20260828" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Expensio",
+      "url": "https://expensio.co.in/",
+      "logo": "https://expensio.co.in/assets/mark.png"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Expensio",
+      "url": "https://expensio.co.in/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "reviewCount": "4"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does auto-detecting transactions work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Android, with your permission, Expensio reads incoming bank and UPI notifications on your device, extracts the amount, merchant and account, and logs the transaction. Recognised accounts are captured automatically; anything ambiguous waits as a one-tap confirmation. The parsing happens entirely on your phone — nothing is ever uploaded. On iPhone this isn't possible — Apple doesn't let any app read notifications or SMS. Instead you add a spend by voice in the app or by asking Siri, which takes about as long as reading the notification would."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platforms is Expensio on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Expensio is on Android today, and lands on iPhone in September 2026. Everything core is identical on both — accounts, credit-card cycles, EMIs, budgets, insights, backups and offline-first privacy. Automatic capture from bank notifications is Android-only, because Apple doesn't permit it — iPhone users add a spend by voice or via Siri. Home-screen widgets and app-icon shortcuts are also Android-only for now, and follow on iOS in a later release."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my financial data private and secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Expensio is offline-first with no ads and no third-party trackers. Your data lives in a local database on your device, protected by an optional biometric App Lock. Backups go only to your own Google Drive, and full card numbers and CVVs are never stored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work without internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Completely. Every core feature — tracking, budgets, analytics, cards and EMIs — works fully offline. An internet connection is only needed for optional extras like Google Drive backup and live currency rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Expensio free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — the core experience is free, including expense & income tracking, budgets and App Lock. Expensio Pro unlocks unlimited accounts & cards, advanced statistics, PDF statements, custom categories and Expensio AI, with a free trial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up and move my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Auto and manual backups sync to your own Google Drive, and you can export your full history to CSV or JSON at any time. You own your data, always."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
